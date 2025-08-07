@@ -1,0 +1,36 @@
+body {
+    background-color: rgb(164, 221, 221);
+}
+
+h1 {
+    color: aliceblue;
+    text-align: center;
+}
+
+.centro {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+button {
+    background-color: gray;
+    box-shadow: 1px 3px 10px rgb(0, 238, 255);
+    margin: 5px;
+    margin-top: 10px;
+}
+
+input {
+    box-shadow: 1px 3px 10px rgb(0, 238, 255);
+    margin: 5px;
+    margin-bottom: 11px;
+}
+
+ul {
+    background-color: rgb(184, 184, 184);
+    border: 1px black solid;
+}
+
+header {
+    background-color: rgba(89, 108, 122, 0.418);
+}
