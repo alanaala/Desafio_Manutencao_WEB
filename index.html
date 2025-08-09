@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Controle de Gastos e Ganhos</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Controle de Gastos e Ganhos</h1>
+  </header>
+  <main>
+    <section aria-label="Adicionar gasto">
+      <h2>Adicionar Gasto</h2>
+      <label for="descGasto">Descrição:</label>
+      <input type="text" id="descGasto" name="descGasto" placeholder="Descrição do gasto" required minlength="3" maxlength="100" pattern="[A-Za-z0-9 ]+" />
+
+      <label for="valorGasto">Valor:</label>
+      <input type="number" id="valorGasto" name="valorGasto" placeholder="Valor do gasto" step="0.01" min="0.01" required />
+
+      <label for="dataGasto">Data:</label>
+      <input type="date" id="dataGasto" name="dataGasto" max="" required />
+
+      <button id="btnAddGasto">Adicionar Gasto</button>
+    </section>
+
+    <section aria-label="Adicionar ganho">
+      <h2>Adicionar Ganho</h2>
+      <label for="descGanho">Descrição:</label>
+      <input type="text" id="descGanho" name="descGanho" placeholder="Descrição do ganho" required minlength="3" maxlength="100" pattern="[A-Za-z0-9 ]+" />
+
+      <label for="valorGanho">Valor:</label>
+      <input type="number" id="valorGanho" name="valorGanho" placeholder="Valor do ganho" step="0.01" min="0.01" required />
+
+      <label for="dataGanho">Data:</label>
+      <input type="date" id="dataGanho" name="dataGanho" max="" required />
+
+      <button id="btnAddGanho">Adicionar Ganho</button>
+    </section>
+
+    <section aria-label="Listar e calcular">
+      <h2>Listar e Calcular</h2>
+      <button id="btnListarGastos">Listar Gastos</button>
+      <button id="btnTotalGastos">Ver Total de Gastos</button>
+      <button id="btnListarGanhos">Listar Ganhos</button>
+      <button id="btnTotalGanhos">Ver Total de Ganhos</button>
+      <button id="btnSaldoFinal">Ver Saldo Final</button>
+    </section>
+
+    <section aria-label="Remover transações">
+      <h2>Remover Gasto</h2>
+      <label for="removerGastoIndex">Número do gasto a remover:</label>
+      <input type="number" id="removerGastoIndex" name="removerGastoIndex" min="1" placeholder="Número do gasto" />
+      <button id="btnRemoverGasto">Remover Gasto</button>
+
+      <h2>Remover Ganho</h2>
+      <label for="removerGanhoIndex">Número do ganho a remover:</label>
+      <input type="number" id="removerGanhoIndex" name="removerGanhoIndex" min="1" placeholder="Número do ganho" />
+      <button id="btnRemoverGanho">Remover Ganho</button>
+    </section>
+
+    <section aria-live="polite" aria-label="Saída das informações">
+      <pre id="saida" style="white-space: pre-wrap; background: #f0f0f0; padding: 15px; border-radius: 8px; max-width: 600px; margin: 30px auto; font-family: monospace; min-height: 200px;">
+Aqui aparecerão as informações do sistema.
+      </pre>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
